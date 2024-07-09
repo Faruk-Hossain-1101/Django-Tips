@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
+    'django_crontab',
+]
+
+CRONJOBS = [
+    ('* * * * *', 'shop.cron.first_cron.cron_log'),
 ]
 
 
