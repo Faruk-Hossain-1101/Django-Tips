@@ -148,7 +148,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'shop_debug.log'),
+            'filename': os.path.join(BASE_DIR, 'log/shop_debug.log'),
             'formatter': 'verbose',
         },
     },
@@ -159,7 +159,7 @@ LOGGING = {
             'propagate': True,
         },
         'shop': {
-            'handlers': ['console', 'file'],
+            'handlers': ['file'],
             'level': 'DEBUG',
             'propagate': False,
         },
