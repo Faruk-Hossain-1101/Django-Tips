@@ -39,13 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',
-    'django_crontab',
+    'cron_command',
 ]
-
-CRONJOBS = [
-    ('* * * * *', 'shop.cron.first_cron.cron_log'),
-]
-
+CRON_JOBS = {
+    'job1': {
+        'schedule': '* * * * *',
+        'command': 'first_command'
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
