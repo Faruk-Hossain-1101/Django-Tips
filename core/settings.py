@@ -41,12 +41,6 @@ INSTALLED_APPS = [
     'shop',
     'cron_command',
 ]
-CRON_JOBS = {
-    'job1': {
-        'schedule': '* * * * *',
-        'command': 'first_command'
-    },
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -169,5 +163,16 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': False,
         },
+    },
+}
+
+CRON_JOBS = {
+    'job1': {
+        'schedule': '* * * * *',
+        'command': 'first_cron'
+    },
+    'job2': {
+        'schedule': '* * * * *',
+        'command': 'first_cron add'
     },
 }
